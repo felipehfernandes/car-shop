@@ -7,7 +7,7 @@ import {
   model,
 } from 'mongoose';
   
-import HttpException from '../Exceptions/Http.exception';
+import HttpExc from '../Exceptions/Http.exception';
   
 abstract class AbstractODM<T> {
   protected model: Model<T>;
@@ -21,7 +21,7 @@ abstract class AbstractODM<T> {
   }
   
   private validateMongoId(_id: string): void {
-    if (!isValidObjectId(_id)) throw new HttpException(422, 'Invalid mongo id');
+    if (!isValidObjectId(_id)) throw new HttpExc(422, 'Invalid mongo id');
   }
   
   public async create(obj: T): Promise<T> {

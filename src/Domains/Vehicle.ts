@@ -8,14 +8,7 @@ class Vehicle {
   protected status: boolean;
   protected buyValue: number;
 
-  constructor({
-    model,
-    year,
-    color,
-    status = false,
-    buyValue,
-    id,
-  }: IVehicle) {
+  constructor({ model, year, color, status = false, buyValue, id }: IVehicle) {
     this.model = model;
     this.year = year;
     this.color = color;
@@ -27,7 +20,6 @@ class Vehicle {
   public setId(id: string) {
     this.id = id;
   }
-
   public getId() { return this.id; }
 
   public setModel(model: string) {

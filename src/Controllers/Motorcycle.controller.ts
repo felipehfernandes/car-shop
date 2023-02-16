@@ -6,11 +6,6 @@ import AbstractController from './Abstract.controller';
 export default class MotorcycleController extends
   AbstractController<IMotorcycle> {
   constructor(req: Request, res: Response, next: NextFunction) {
-    super(
-      new MotorcycleService(),
-      req, 
-      res, 
-      next,
-    );
+    super(new MotorcycleService(), req, res, next);
   }
 }

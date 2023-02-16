@@ -6,17 +6,9 @@ class Motorcycle extends VehicleDomain {
   private category: MotoCategory;
   private engineCapacity: number;
 
-  constructor({
-    model,
-    year,
-    color,
-    status,
-    buyValue,
-    category,
-    engineCapacity,
-    id,
-  }: IMotorcycle) {
+  constructor({ model, year, color, status, buyValue, category, engineCapacity, id }: IMotorcycle) {
     super({ model, year, color, status, buyValue, id });
+    
     this.engineCapacity = engineCapacity;
     this.category = category;
   }
